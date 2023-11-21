@@ -1,0 +1,247 @@
+{% extends "include/homepage.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'include/header.html' %}
+    <!-- breadcrumb start  -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-inner d-flex justify-content-between">
+                        <h2 class="page-title">Contact</h2>
+                        <ul class="page-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb end  -->
+
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+    </div>
+    
+    <!-- contact area start  -->
+    <div class="contact-info margin-top-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h3>Свяжитесь с нами</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-contact-box">
+                        <div class="icon">
+                            <i class="icon-call-header"></i>
+                        </div>
+                        <a href="tel:{{settings.phone}}">{{settings.phone}}</a><br>
+
+                        <span>Телефонный номер</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-contact-box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-open"></i>
+                        </div>
+                        <a href="#">{{settings.email}}</a><br>
+                       
+                        <span>Почта</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-contact-box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <span>
+                            {{settings.address}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact area end  -->
+
+    <!-- contact form start  -->
+    <div class="contact-form text-center padding-top-80 padding-bottom-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form method = "POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <input type="text" class="form-control" name = "name" placeholder="Введите имя*">
+                          </div>
+                          
+                        </div>
+                        <div class="forzm-row">
+                          <div class="form-group col-md-6">
+                            <input type="email" class="form-control" name = "email" placeholder="Введите почту*">
+                          </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <textarea name="message"  rows="8" placeholder="Введите сообщение"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-contact">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact form end  -->
+
+    <!-- instagram start -->
+    <div class="instagram-area margin-top-75">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="instagram-title margin-bottom-40">
+                        <h4><span>@ <a href="#">FOLLOW</a></span> US ON INSTAGRAM</h4>
+                        <h6>shop our instagram</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="instagram-slider">
+                        <div class="thumb">
+                            <img src="{% static 'assets/img/instagram/1.png' %}" alt="">
+                        </div>
+                        <div class="thumb">
+                            <img src="{% static 'assets/img/instagram/2.png' %}" alt="">
+                        </div>
+                        <div class="thumb">
+                            <img src="{% static 'assets/img/instagram/3.png' %}" alt="">
+                        </div>
+                        <div class="thumb">
+                            <img src="{% static 'assets/img/instagram/4.png' %}" alt="">
+                        </div>
+                        <div class="thumb">
+                            <img src="{% static 'assets/img/instagram/5.png' %}" alt="">
+                        </div>
+                        <div class="thumb">
+                            <img src="{% static 'assets/img/instagram/6.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- instagram end -->
+
+    <!-- footer area start -->
+    <footer class="footer-area footer-style-1 padding-top-70 margin-top-70">
+        <div class="footer-top padding-bottom-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                            <ul>
+                                <li><a href="#">Clothing</a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Women</a></li>
+                                <li><a href="#">Men</a></li>
+                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">New Arrivals</a></li>
+                                <li><a href="#">Clearance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">OUR POLICY</h4>
+                            <ul>
+                                <li><a href="#">Brands</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Gift Certificates</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">Shipping & Delivery</a></li>
+                                <li><a href="#">My Account</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="widget contact-widget">
+                            <h4 class="widget-title">GET IN TOUCH</h4>
+                            <ul class="contact_info_list">
+                                <li class="single-info-item">
+                                    <div class="icon">
+                                        <i class="icon-home-foother"></i>
+                                    </div>
+                                    <div class="details">
+                                        <span>Davis Patrick<br>P.O. Box 147 2546 Sociosqu Rd. <br>Bethlehem Utah 02913</span>
+                                    </div>
+                                </li>
+                                <li class="single-info-item">
+                                    <div class="icon">
+                                        <i class="icon-email-subscribe"></i>
+                                    </div>
+                                    <div class="details">
+                                        support@example.com
+                                    </div>
+                                </li>
+                                <li class="single-info-item">
+                                    <div class="icon">
+                                        <i class="icon-call-footer"></i>
+                                    </div>
+                                    <div class="details">
+                                        <a href="tel:+496170961709">(939) 353-1107, (302) 259-2375</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">FOLLOW US</h4>
+                            <ul>
+                                <li><a href="#"><i class="icon-facebook"></i> Facebook</a></li>
+                                <li><a href="#"><i class="icon-skype"></i> Twitter</a></li>
+                                <li><a href="#"><i class="icon-instagram"></i> Instagram</a></li>
+                                <li><a href="#"><i class="icon-pinterest"></i> Pinterest</a></li>
+                                <li><a href="#"><i class="icon-youtube"></i> Youtube</a></li>
+                                <li><a href="#"><i class="icon-skype"></i> Skype</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <p>© Stoon 2020. Powered with <i class="fa fa-heart"></i> by <a href="http://zwin.io/" target="_blanc">Zwin</a>.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li><a href="#"><img src="{% static 'assets/img/payment/1.png' %}" alt=""></a></li>
+                            <li><a href="#"><img src="{% static 'assets/img/payment/2.png' %}" alt=""></a></li>
+                            <li><a href="#"><img src="{% static 'assets/img/payment/3.png' %}" alt=""></a></li>
+                            <li><a href="#"><img src="{% static 'assets/img/payment/4.png' %}" alt=""></a></li>
+                            <li><a href="#"><img src="{% static 'assets/img/payment/5.png' %}" alt=""></a></li>
+                            <li><a href="#"><img src="{% static 'assets/img/payment/6.png' %}" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

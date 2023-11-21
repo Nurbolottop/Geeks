@@ -1,0 +1,4 @@
+Please be aware that running an infinite loop like this, 
+especially one that creates files, can quickly consume system 
+resources and fill up your storage space if not managed properly. 
+Make sure you have a clear purpose for this code and monitor its execution.
